@@ -9,6 +9,11 @@ date: 2025-08-26
 lang: ca
 ---
 
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+
 <style>
 .exercici-classe, .exercici-casa {
   position: relative;
@@ -89,6 +94,10 @@ Aquí només hauria d’executar-se una de les opcions.
 
 ---
 
+<div style="display: flex; gap: 30px;">
+
+<div style="flex: 1;">
+
 # if - else
 
 Amb `else` simplifiquem:
@@ -103,6 +112,14 @@ else:
 ```
 
 ➡️ Sempre s’executa únicament una branca.
+
+</div>
+
+<div style="flex: 1;">
+
+<img src="diagram1.svg" width="400">
+
+</div>
 
 ---
 
@@ -143,6 +160,10 @@ Age of maturity
 
 ---
 
+<div style="display: flex; gap: 30px;">
+
+<div style="flex: 1;">
+
 # if - elif - else
 
 Quan hi ha més de dues opcions:
@@ -159,6 +180,14 @@ else:
     print("Empat!")
 ```
 
+</div>
+
+<div style="flex: 1;">
+<img src="diagram2.svg" width="400">
+</div>
+
+</div>
+
 ---
 
 # Diverses branques
@@ -169,12 +198,12 @@ Es poden posar tants `elif` com calgui:
 print("Calendari de festius")
 data = input("Quina data és avui? ")
 
-if data == "26 Des":
-print("És Sant Esteve")
+if data == "25 Des":
+  print("És Nadal")
 elif data == "31 Des":
-print("És Cap d’Any (Hogmanay)")
+  print("És Cap d’Any")
 elif data == "1 Gen":
-print("És Any Nou")
+  print("És Any Nou")
 
 print("Gràcies i adéu.")
 ```
@@ -195,4 +224,3 @@ The elder
 Alphabetically last
 
 </div>
-```

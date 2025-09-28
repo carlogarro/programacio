@@ -110,26 +110,24 @@ El bloc principal ha de començar a l’extrem esquerre del fitxer.
 
 # Expressió
 
-Una expressió = tros de codi que té un valor.
+Una expressió és un tros de codi que té un determinat tipus.
 
-Expressió Valor Tipus
-2 + 4 + 3 9 enter (int)
-"abc"+"de" "abcde" text (str)
-11 / 2 5.5 decimal (float)
-2 \* 5 > 9 True booleà (bool)
+|  Expressió   |  Valor  |         Tipus         | Python data type |
+| :----------: | :-----: | :-------------------: | :--------------: |
+|  2 + 4 + 3   |    9    |        integer        |       int        |
+| "abc" + "de" | "abcde" |        string         |       str        |
+|    11 / 2    |   5.5   | floating point number |      float       |
+|  2 \* 5 > 9  |  True   |     Boolean value     |       bool       |
 
-Les expressions es poden assignar a variables:
+Les expressions es poden assignar a variables.
 
-```python
-x = 1 + 2
-y = 3 \* x + x\*\*2
-```
+---
 
 # Funció
 
 Una funció executa una funcionalitat.
 
-Pot rebre arguments (o paràmetres).
+Pot rebre **arguments** (o paràmetres).
 
 ```python
 print("això és un argument")
@@ -152,7 +150,7 @@ nom = "Anna" # str
 resultat = 100 # int
 ```
 
-Es pot consultar amb `type()`:
+Es pot consultar amb la funció `type()`:
 
 ```python
 print(type("Anna")) # <class 'str'>
@@ -163,12 +161,12 @@ print(type(100)) # <class 'int'>
 
 # Sintaxi
 
-La sintaxi = regles de com s’ha d’escriure el codi.
+Igual que als llenguatges naturals, la sintaxi d'un llenguatge determina com s’ha d’escriure el codi.
 
-En Python, si no es compleixen les regles:
+En Python, si no es compleixen les regles tindrem `SyntaxError`.
 
 ```python
-if nom == "Anna":
+if nom == "Anna"
     print("Hola!")
 ```
 
@@ -179,17 +177,38 @@ SyntaxError: invalid syntax
 
 ---
 
-# Depuració (Debugging)
+# Debugar (_Debugging_)
 
-Si sintaxi és correcta però el programa no funciona bé, hi ha un _bug_.
+Si la sintaxi és correcta però el programa no funciona bé, hi ha un <span style="color:red">_bug_</span>.
+**És una habilitat clau per a qualsevol programador/a.**
 
-**Tipus d'error**:
+Exemple:
 
-- Errors d’execució (ZeroDivisionError)
-- Errors lògics (resultats inesperats)
+```python
+x = 10
+y = 0
+result = x / y
+
+print(f"{x} divided by {y} is {result}")
+```
+
+```text
+ZeroDivisionError: integer division or modulo by zero on line 3
+```
+
+---
 
 **Mètodes útils**:
 
-- Afegir print de depuració per veure valors intermedis
-- Provar el programa amb diferents entrades
-- Localitzar la línia del problema
+- Afegir print de depuració per veure valors intermedis.
+- Provar el programa amb diferents _input_
+- Localitzar la línia del problema al text de l'error.
+
+<div class="exercici-casa">
+Fix the syntax
+
+Number of characters
+
+Typecasting
+
+</div>
