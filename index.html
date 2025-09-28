@@ -2,39 +2,70 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Guía de Programación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>📘 Diapositives de Programació - 1r Batxillerat</title>
     <style>
       body {
         font-family: Arial, sans-serif;
-        margin: 2rem;
+        margin: 0;
+        padding: 1rem;
         background: #f4f6f9;
         color: #333;
       }
-      h1 {
+      header {
         text-align: center;
-        color: #2c3e50;
+        padding: 1.5rem;
+        background: #2c3e50;
+        color: white;
+      }
+      h1 {
+        margin: 0;
+        font-size: 1.8rem;
       }
       h2 {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
+        font-size: 1.3rem;
         color: #34495e;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 0.3rem;
       }
       ul {
-        list-style-type: none;
-        padding-left: 1rem;
+        list-style: none;
+        padding-left: 0;
       }
       li {
-        margin: 0.3rem 0;
+        margin: 0.6rem 0;
       }
       a {
         text-decoration: none;
         color: #2980b9;
+        font-size: 1rem;
+        font-weight: 500;
+        display: inline-block;
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
+        transition: background 0.2s, color 0.2s;
       }
       a:hover {
-        text-decoration: underline;
+        background: #2980b9;
+        color: white;
       }
-      .file-links {
-        font-size: 0.9rem;
-        color: #555;
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        body {
+          padding: 0.5rem;
+        }
+        h1 {
+          font-size: 1.4rem;
+        }
+        h2 {
+          font-size: 1.1rem;
+        }
+        a {
+          font-size: 0.95rem;
+          padding: 0.3rem 0.5rem;
+        }
       }
     </style>
   </head>
@@ -43,9 +74,6 @@
 
     <h2>Part 1</h2>
     <ul>
-      <li>
-        <a href="part1/0_intro_progr.md">Introducció a la programació</a>
-      </li>
       <li>
         <a href="part1/11_getting_started.html">Comencem</a>
       </li>
@@ -75,7 +103,7 @@
         >
       </li>
       <li>
-        <a href="part2/22_more_conditionals">Més sobre condicionals</a>
+        <a href="part2/22_more_conditionals.html">Més sobre condicionals</a>
       </li>
     </ul>
   </body>
