@@ -76,6 +76,8 @@ section::after {
 - **or** → almenys una condició ha de ser veritable
 - **not** → nega una condició
 
+---
+
 Exemple amb `and`:
 
 ```python
@@ -84,9 +86,7 @@ if number >= 5 and number <= 8:
     print("El número està entre 5 i 8")
 ```
 
----
-
-Exemple amb or:
+Exemple amb `or`:
 
 ```python
 number = int(input("Introdueix un número: "))
@@ -96,37 +96,42 @@ print("El número NO està entre 5 i 8")
 
 ---
 
-Taula de veritat
-| a | b | a and b | a or b |
-| ----- | ----- | ------- | ------ |
-| False | False | False | False |
-| True | False | False | True |
-| False | True | False | True |
-| True | True | True | True |
+# Taula de veritat:
 
-Not:
-| a | not a |
+<div style="display: flex; gap: 30px;">
+
+<div style="flex: 1;">
+
+| a     | b     | a and b | a or b |
+| ----- | ----- | ------- | ------ |
+| False | False | False   | False  |
+| True  | False | False   | True   |
+| False | True  | False   | True   |
+| True  | True  | True    | True   |
+
+</div>
+
+<div style="flex: 1;">
+
+| a     | not a |
 | ----- | ----- |
-| True | False |
-| False | True |
+| True  | False |
+| False | True  |
+
+</div>
+</div>
 
 ---
 
-```python
-number = int(input("Introdueix un número: "))
-if not (number >= 5 and number <= 8):
-print("El número NO està entre 5 i 8")
-```
+# Notació simplificada
 
-Els operadors lògics també s’anomenen Boolean operators
+Condició clàssica:
 
-Notació simplificada
+`x >= a and x <= b`
 
-Condició clàssica: x >= a and x <= b
+Notació simplificada en **Python** igual que en matemàtiques:
 
-Notació simplificada en Python: a <= x <= b
-
-Funciona igual que la versió llarga
+`a <= x <= b`
 
 ---
 
@@ -139,16 +144,29 @@ n3 = int(input("Número 3: "))
 n4 = int(input("Número 4: "))
 
 if n1 > n2 and n1 > n3 and n1 > n4:
-greatest = n1
+  gran = n1
 elif n2 > n3 and n2 > n4:
-greatest = n2
+  gran = n2
 elif n3 > n4:
-greatest = n3
+  gran = n3
 else:
-greatest = n4
+  gran = n4
 
-print(f"{greatest} és el més gran dels números")
+print(f"{gran} és el més gran dels números")
 ```
+
+---
+
+<div class="exercici-classe">
+Age check
+
+Nephews
+
+Grades and points
+
+FizzBuzz
+
+</div>
 
 ---
 
@@ -160,27 +178,13 @@ Un `if` pot estar dins d’un altre `if`
 number = int(input("Introdueix un número: "))
 
 if number > 0:
-if number % 2 == 0:
-print("El número és parell")
+  if number % 2 == 0:
+    print("El número és parell")
+  else:
+    print("El número és senar")
 else:
-print("El número és senar")
-else:
-print("El número és negatiu o zero")
+  print("El número és negatiu o zero")
 ```
-
-Exemple amb sortides
-
-Entrada: 3 → "El número és senar"
-
-Entrada: 18 → "El número és parell"
-
-Entrada: -4 → "El número és negatiu o zero"
-
-Atenció a la indentació
-
-La indentació defineix quines branques pertanyen a cada condició
-
-Errors d’indentació poden canviar totalment el comportament del programa
 
 ---
 
@@ -190,13 +194,24 @@ Errors d’indentació poden canviar totalment el comportament del programa
 number = int(input("Introdueix un número: "))
 
 if number > 0 and number % 2 == 0:
-print("El número és parell")
+  print("El número és parell")
 elif number > 0 and number % 2 != 0:
-print("El número és senar")
+  print("El número és senar")
 else:
-print("El número és negatiu o zero")
+  print("El número és negatiu o zero")
 ```
 
-Funciona igual que l’exemple amb nesting
+Funciona igual que l’exemple amb nesting.
 
-Escollir una opció o l’altra depèn de la claredat i de la situació
+Escollir una opció o l’altra depèn de la claredat i de la situació.
+
+---
+
+<div class="exercici-classe">
+Leap year
+
+Alphabetically in the middle
+
+Gift tax calculator
+
+</div>
