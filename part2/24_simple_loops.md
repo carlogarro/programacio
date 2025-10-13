@@ -154,7 +154,7 @@ Anem a fer més realista el codi de la contrassenya.
 ```python
 intents = 0
 while True:
-code = input("Introdueix el teu PIN: ")
+codi = input("Introdueix el teu PIN: ")
 intents += 1
     if codi == "1234":
         correcte = True
@@ -178,9 +178,9 @@ Els bucles poden causar errors difícils de detectar. És molt útil afegir `pri
 ```python
 while True:
     print("Inici del bucle")
-    code = input("PIN: ")
-    attempts += 1
-    print("Intents:", attempts)
+    codi = input("PIN: ")
+    intents += 1
+    print("Intents:", intents)
 ```
 
 Això t’ajuda a entendre en quin punt s’està executant el codi i quines condicions es compleixen.
@@ -196,37 +196,29 @@ The next leap year
 
 ---
 
-➡️ En aquest ordre, si el codi correcte s’introdueix en el tercer intent, no es comprova mai la segona condició.
-L’ordre de les condicions és clau!
-Concatenació de cadenes amb +
+# Concatenar strings amb l'operador `+`
 
 També pots fer servir variables per guardar informació dins el bucle.
 
-codes = ""
-attempts = 0
+```python
+codis = ""
+intents = 0
 
 while True:
-code = input("Introdueix el teu PIN: ")
-attempts += 1
-codes += code + ", " # ...
+codi = input("Introdueix el teu PIN: ")
+intents += 1
+codis += code + ", "
+```
 
-📦 Aquí codes va acumulant tots els PINs escrits, separats per comes.
-Exemple de resultat
+Aquí `codis` va acumulant tots els PINs escrits, separats per comes.
 
-1111, 2222, 1234,
-
-💡 Cada iteració afegeix el nou valor a la cadena codes.
 Això també és útil per guardar l’historial de dades dins d’un bucle.
-Resum
 
-    Els bucles permeten repetir codi fins que es compleixi una condició.
+---
 
-    while True → bucle infinit fins que s’executa break.
+<div class="exercici-classe">
+Story
 
-    Les variables auxiliars ajuden a controlar l’estat i evitar errors.
+Working with numbers
 
-    Els print de depuració són essencials per trobar problemes dins de bucles.
-
-```
-
-```
+</div>
