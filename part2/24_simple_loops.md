@@ -154,15 +154,15 @@ Anem a fer més realista el codi de la contrassenya.
 ```python
 intents = 0
 while True:
-codi = input("Introdueix el teu PIN: ")
-intents += 1
-    if codi == "1234":
-        correcte = True
-        break
-    if attempts == 3:
-        correcte = False
-        break
-    print("Incorrecte... torna-ho a provar")
+  codi = input("Introdueix el teu PIN: ")
+  intents += 1
+      if codi == "1234":
+          correcte = True
+          break
+      if intents == 3:
+          correcte = False
+          break
+      print("Incorrecte... torna-ho a provar")
 if correcte:
     print("PIN correcte!")
 else:
@@ -176,6 +176,7 @@ else:
 Els bucles poden causar errors difícils de detectar. És molt útil afegir `print` per veure què passa dins del bucle.
 
 ```python
+intents = 0
 while True:
     print("Inici del bucle")
     codi = input("PIN: ")
@@ -203,11 +204,10 @@ També pots fer servir variables per guardar informació dins el bucle.
 ```python
 codis = ""
 intents = 0
-
 while True:
-codi = input("Introdueix el teu PIN: ")
-intents += 1
-codis += code + ", "
+  codi = input("Introdueix el teu PIN: ")
+  intents += 1
+  codis += code + ", "
 ```
 
 Aquí `codis` va acumulant tots els PINs escrits, separats per comes.
