@@ -345,3 +345,43 @@ Does it contain vowels
 </div>
 
 ---
+
+## Buscar la posició d’un substring dins d’un string
+
+L’operador `in` només ens diu si un substring existeix dins d’un string o no. Però no ens indica on es troba exactament.
+
+Per conèixer la seva posició, podem utilitzar el mètode `find` dels strings en Python.
+
+El mètode [find](https://docs.python.org/es/3.14/library/stdtypes.html#str.find) rep com a argument el substring que volem buscar, retorna la posició (índex) del primer lloc on apareix, i retorna -1 si no el troba dins l’string.
+
+---
+
+```python
+input_string = "test"
+
+print(input_string.find("t"))   # 0
+print(input_string.find("x"))   # -1
+print(input_string.find("es"))  # 1
+print(input_string.find("ets")) # -1
+```
+
+**Què és un mètode?** `find` és un mètode dels objectes de tipus string. Els mètodes funcionen de manera similar a les funcions, però estan lligats a un objecte concret.
+
+En aquest cas, l’objecte és l’string sobre el qual cridem el mètode:
+
+```python
+text = "programacio"
+text.find("acio")
+```
+
+---
+
+<div class="exercici-classe">
+
+Find the first substring
+
+Find all the substrings
+
+The second occurrence
+
+</div>
