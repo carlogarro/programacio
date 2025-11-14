@@ -182,8 +182,8 @@ def saludar(nom):
     else:
         print("Ei", nom)
 
-hello("Emily")
-hello("Mark")
+saludar("Emily")
+saludar("Mark")
 ```
 
 ---
