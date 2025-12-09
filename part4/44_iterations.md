@@ -117,3 +117,97 @@ Star-studded ⭐
 </div>
 
 ---
+
+## La funció range
+
+`range(final)` -> Rep un sol argument: Crea una "llista" de 0 fins a final-1. El valor final no s’inclou.
+
+```python
+for i in range(5):
+    print(i)
+```
+
+`range(inici, final)` -> Amb dos arguments: Comença a inici i acaba a final - 1
+
+```python
+for i in range(3, 7):
+    print(i)
+```
+
+---
+
+`range(inici, final, pas)` -> Amb tres arguments: El tercer indica de quant en quant
+
+```python
+for i in range(1, 9, 2):
+    print(i)
+```
+
+El pas pot ser negatiu: Serveix per comptar enrere
+
+```python
+for i in range(6, 2, -1):
+    print(i)
+```
+
+---
+
+## Resum ràpid
+
+`range(b)` → de 0 fins b-1
+
+`range(a, b)` → de a fins b-1
+
+`range(a, b, c)` → de a fins b-1 amb pas de c
+
+El final mai s’inclou
+
+<div class="exercici">
+
+From negative to positive ⭐
+
+</div>
+
+---
+
+## De range a list
+
+La funció range no retorna una llista. Retorna un objecte de tipus range. Aquest objecte es pot recórrer amb for, però no es mostra com una llista quan l'imprimeixes.
+
+Si imprimeixes directament un range, veuràs això:
+
+```python
+numbers = range(2, 7)
+print(numbers)
+```
+
+Resultat:
+range(2, 7)
+
+---
+
+Python només mostra una descripció, no els valors. Per obtenir tots els valors, fem servir la funció list. Aquesta funció transforma el range en una llista real.
+
+```python
+numbers = list(range(2, 7))
+    print(numbers)
+```
+
+Resultat:
+[2, 3, 4, 5, 6]
+
+---
+
+<div class="exercici">
+
+List of stars ⭐
+Anagrams ⭐⭐
+Palindromes ⭐⭐
+The sum of positive numbers ⭐
+Even numbers ⭐
+The sum of lists ⭐⭐
+Distinct numbers ⭐⭐⭐
+
+</div>
+
+---
