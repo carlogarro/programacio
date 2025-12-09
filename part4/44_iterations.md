@@ -211,3 +211,42 @@ Distinct numbers ⭐⭐⭐
 </div>
 
 ---
+
+## Trobar el millor o el pitjor element d’una llista
+
+És una tasca molt habitual en programació. Consisteix a recórrer una llista i quedar-se amb l’element més adequat.
+
+El criteri pot ser:
+
+- el més gran
+- el més petit
+- el millor segons alguna condició
+
+---
+
+Fem servir una variable auxiliar.
+
+Aquesta variable _recorda_ el millor element trobat fins ara.
+
+Cada nou element es compara amb el millor actual.
+
+**Estructura general**
+
+```python
+best = valor_inicial
+for item in my_list:
+    if item és millor que best:
+best = item
+```
+
+`best` comença amb un valor inicial. El `for loop` recorre tota la llista. Si trobem un element millor, l’actualitzem.
+
+---
+
+<div class="exercici">
+
+The length of the longest in the list ⭐⭐
+The shortest in the list ⭐⭐
+All the longest in the list ⭐⭐⭐
+
+</div>
