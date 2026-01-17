@@ -234,38 +234,42 @@ Com passen dades d’una a l’altra?
 ---
 
 ```python
-
 def input_from_user(how_many: int):
-    print(f"Please type in {how_many} numbers:")
+    print(f"Si us plau, introdueix {how_many} nombres:")
     numbers = []
-
     for i in range(how_many):
-        number = int(input(f"Number {i+1}: "))
+        number = int(input(f"Nombre {i+1}: "))
         numbers.append(number)
-
     return numbers
+```
 
+```python
 def print_result(numbers: list):
-    print("The numbers are: ")
+    print("Els nombres: ")
     for number in numbers:
         print(number)
+```
 
+```python
 def analyze(numbers: list):
     mean = sum(numbers) / len(numbers)
-    return f"There are altogether {len(numbers)} numbers, the mean is {mean}, the smallest is {min(numbers)} and the greatest is {max(numbers)}"
-
-# the "main function" using these functions
-inputs = input_from_user(5)
-print_result(inputs)
-analysis_result = analyze(inputs)
-print(analysis_result)
-
+    return f"Hi ha {len(numbers)} nombres, la mitjana és {mean},
+    el més petit {min(numbers)} i el més gran {max(numbers)}"
 ```
 
 ---
 
+## La funció _main_ usa totes les funcions
+
+```python
+inputs = input_from_user(5)
+print_result(inputs)
+analysis_result = analyze(inputs)
+print(analysis_result)
+```
+
 <div class="exercici">
 
-Grade statistics
+Grade statistics: input_user(), exercise_points(), calc_grade(), mean(), main()
 
 </div>
