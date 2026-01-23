@@ -201,3 +201,98 @@ for row in my_matrix:
     for element in row:
         print(element)
 ```
+
+[Visualization tool a python tutor](https://pythontutor.com/visualize.html#)
+
+---
+
+## Accedir a una fila
+
+Seleccionar una fila és directe: només cal l’índex de la fila.
+
+```python
+def sum_of_row(my_matrix, row_no: int):
+    row = my_matrix[row_no]     # agafem la fila
+    row_sum = 0
+    for item in row:
+        row_sum += item
+    return row_sum
+
+m = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]
+
+my_sum = sum_of_row(m, 1)
+print(my_sum)   # 33 → 9 + 1 + 12 + 11
+```
+
+---
+
+## Accedir a una columna
+
+Com que la matriu està guardada per files, cal recorrer totes les files i agafar l’índex de la columna.
+
+```python
+def sum_of_column(my_matrix, column_no: int):
+    column_sum = 0
+    for row in my_matrix:
+        column_sum += row[column_no]
+    return column_sum
+
+m = [[4, 2, 3, 2], [9, 1, 12, 11], [7, 8, 9, 5], [2, 9, 15, 1]]
+
+my_sum = sum_of_column(m, 2)
+print(my_sum)   # 39 → 3 + 12 + 9 + 15
+```
+
+---
+
+<div class="exercici">
+
+Number of matching elements
+
+</div>
+
+## Una matriu bidimensional per fer l'estructura d'un joc
+
+Una matriu (o _array 2D_) és una estructura molt útil per representar taulers de joc.
+Molts jocs funcionen sobre una quadrícula → és natural guardar l’estat del joc en files i columnes.
+
+---
+
+## Sudoku
+
+Un sudoku es pot representar amb una matriu de 9×9:
+
+![sudoku](https://programming-24.mooc.fi/static/5a4d938ae5202e8db72b179ff4d76293/0cb6c/5_1_3.webp)
+
+---
+
+```python
+sudoku = [
+[9, 0, 0, 0, 8, 0, 3, 0, 0],
+[0, 0, 0, 2, 5, 0, 7, 0, 0],
+[0, 2, 0, 3, 0, 0, 0, 0, 4],
+[0, 9, 4, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 7, 3, 0, 5, 6, 0],
+[7, 0, 5, 0, 6, 0, 4, 0, 0],
+[0, 0, 7, 8, 0, 3, 9, 0, 0],
+[0, 0, 1, 0, 0, 0, 0, 0, 3],
+[3, 0, 0, 0, 0, 0, 0, 0, 2]
+]
+```
+
+---
+
+Podem mostrar correctament amb la següent funció:
+
+```python
+def print_grid(sudoku):
+    for row in sudoku:
+        for square in row:
+            if square > 0:
+                print(f" {square}", end="")
+            else:
+                print(" _", end="")
+        print()
+
+print_grid(sudoku)
+```
