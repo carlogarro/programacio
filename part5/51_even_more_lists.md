@@ -296,3 +296,19 @@ def print_grid(sudoku):
 
 print_grid(sudoku)
 ```
+
+---
+
+<div class="exercici">
+
+Go
+
+Sudoku: check row
+
+Sudoku: check column
+
+Sudoku: check block
+
+Sudoku: check grid
+
+</div>
