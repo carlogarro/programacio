@@ -3,7 +3,7 @@ marp: true
 theme: gaia
 _class: lead
 paginate: true
-title: Sentències condicionals en Python
+title: Encara més sobre llistes
 author: Curs Python 2025
 date: 2025-08-26
 lang: ca
@@ -201,3 +201,5 @@ for row in my_matrix:
     for element in row:
         print(element)
 ```
+
+---
