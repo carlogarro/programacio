@@ -41,7 +41,7 @@ section::after {
 
 </style>
 
-# Diccionaris
+# Tuples
 
 - Coneixer el tipus de dades **tuple**
 - Crear tuples amb diferents valors
