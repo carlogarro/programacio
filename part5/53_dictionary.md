@@ -191,3 +191,96 @@ Phone book, version 2
 ---
 
 ## Eliminar claus i valors d'un diccionari
+
+En Python hi ha diverses maneres d’eliminar elements d’un diccionari.
+
+- Eliminar amb la funció `del` -> Millor evitar-ho
+
+```python
+escola = {
+    "Carlos": "professor",
+    "Pol": "alumne",
+    "Genós": "alumne"
+}
+del escola["Carlos"]
+print(escola)
+```
+
+---
+
+Provocarà error si la clau no existeix. És important comprovar abans d’eliminar.
+
+```python
+if "Marc" in staff:
+    del escola["Marc"]
+    print("Esborrat")
+else:
+    print("Aquesta persona no forma part de l'escola")
+```
+
+---
+
+- Eliminar amb el mètode `pop()`
+
+```python
+escola = {
+  "Carlos": "professor",
+  "Pol": "alumne",
+  "Genós": "alumne"
+}
+
+deleted = staff.pop("David")
+print(escola)
+print(deleted, "deleted")
+```
+
+---
+
+Pop per defecte també ens donaria error si la clau no existeix. Podem utilitzar el segon argument per evitar-ho.
+
+```python
+deleted = escola.pop("Marta", None)
+if deleted == None:
+    print("Aquesta persona no forma part de l'escola")
+else:
+    print(deleted, "deleted")
+```
+
+Si vols esborrar tots els elements d'un diccionari amb un bucle for tindràs el seguent error. `RuntimeError: dictionary changed size during iteration`.
+
+Pots eliminar-lo amb el següent mètode `escola.clear()`.
+
+---
+
+## Diccionaris per a dades estructurades
+
+Són útils per organitzar dades relacionades sota una variable.
+
+```python
+person = {
+    "name": "Pippa Python",
+    "height": 154,
+    "weight": 61,
+    "age": 44
+}
+```
+
+Compara respecte una llista. Has de recordar què és cada posició.
+
+```python
+person = ["Pippa Python", 154, 61, 44]
+```
+
+---
+
+<div class="exercici">
+
+Invert a dictionary
+
+Numbers spelled out
+
+Movie database
+
+Find movies
+
+</div>
