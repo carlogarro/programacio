@@ -3,7 +3,7 @@ marp: true
 theme: gaia
 _class: lead
 paginate: true
-title: Encara més sobre llistes
+title: Diccionaris
 author: Curs Python 2025
 date: 2025-08-26
 lang: ca
