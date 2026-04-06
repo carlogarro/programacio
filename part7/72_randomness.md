@@ -170,8 +170,6 @@ Quan es necessiten números realment aleatoris es poden utilitzar fonts externes
 
 <div class="exercici">
 
-Lottery numbers
-
 Password generator, part 1
 
 Password generator, part 2
